@@ -20,7 +20,7 @@ hbs.registerPartials(partialsPath) //partials 기능은 express가 아닌 hbs가
 
 app.get('', (req, res) => {
     res.render('index', { //veiwPath의 원하는 뷰 파일과 같은 이름으로. 확장자는 샹략.
-        title: 'Weather app', //뷰에서 파마리터의 json 데이터를 받아서 사용할 수 있게.
+        title: '웡이닷컴', //뷰에서 파마리터의 json 데이터를 받아서 사용할 수 있게.
         name: 'Woori'
     }) 
 })
