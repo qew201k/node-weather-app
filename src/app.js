@@ -6,6 +6,7 @@ const forecast = require('./utils/forecast')
 
 //set app config
 const app = express()
+const port = process.env.PORT || 3000
 app.set('view engine', 'hbs') //express의 view engine을 hbs로 설정
 //set public directory path
 const publicDirectoryPath = path.join(__dirname, '../public')
@@ -91,6 +92,6 @@ app.get('*', (req, res) => {
 })
 
 //서버 시작
-app.listen(3000, () => {
-    console.log('server is up on port 3000')
+app.listen(port, () => {
+    console.log(`server is up on ${port}`)
 })

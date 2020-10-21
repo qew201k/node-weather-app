@@ -9,7 +9,7 @@ weatherForm.addEventListener('submit', (e) => {
     message.textContent = 'Now Loading...'
     
     //fetch api (by browser)
-    fetch('http://localhost:3000/weather?address=' + location).then((response) => {
+    fetch('/weather?address=' + location).then((response) => {
         response.json().then((data) => {
             if (data.error) message.textContent = data.error
             else message.textContent = `${data.location}'s temp is ${data.temp}`
